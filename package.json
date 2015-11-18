@@ -9,7 +9,6 @@
     "node-sass": "^3.3.2",
     "node-sass-middleware": "^0.5.0", 
     "dotenv": "^1.1.0",
-    "browser_build/bson.js": 
   },
   "devDependencies": {
     "gulp": "^3.7.0",
@@ -18,7 +17,6 @@
     "gulp-shell": "^0.4.3",
     "gulp-watch": "^0.6.5",
     "gulp-sass": "^2.0.4"
-    
   },
   "engines": {
     "node": ">=0.10.41",
