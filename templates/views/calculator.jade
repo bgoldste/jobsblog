@@ -1,3 +1,5 @@
+include ../mixins/flash-messages
+
 doctype html
 html
   head
@@ -10,6 +12,8 @@ html
     script(src='/js/calc/build/react-dom.js')
     |     
     script(src='/js/calc/build/numeral.js')
+    link(href="/styles/site.css", rel="stylesheet")
+    //- link(href="/styles/calculator.css", rel="stylesheet")
   |   
   body
     #container

@@ -52,20 +52,78 @@ var InputGroup = React.createClass({
 			React.createElement(
 				"form",
 				null,
-				React.createElement("input", {
-					type: "number",
-					placeholder: "Enter your Equity %",
-					value: this.props.eqPercentage,
-					ref: "eqPercentageInput",
-					onChange: this.handleChange
-				}),
-				React.createElement("input", {
-					type: "number",
-					placeholder: "Enter your Company Valuation ",
-					value: this.props.coValuation,
-					ref: "coValuationInput",
-					onChange: this.handleChange
-				})
+				React.createElement(
+					"div",
+					{ className: "row" },
+					React.createElement(
+						"div",
+						{ className: "col-xs-6" },
+						React.createElement(
+							"h2",
+							null,
+							"Your Equity Stake (percentage):"
+						)
+					),
+					React.createElement(
+						"div",
+						{ className: "col-xs-6" },
+						React.createElement(
+							"div",
+							{ className: "input-group input-group-lg" },
+							React.createElement("input", {
+								type: "number",
+								placeholder: "Enter your Equity %",
+								value: this.props.eqPercentage,
+								ref: "eqPercentageInput",
+								onChange: this.handleChange,
+								className: "form-control",
+								min: "0",
+								step: "0.025"
+							}),
+							React.createElement(
+								"span",
+								{ className: "input-group-addon" },
+								"%"
+							)
+						)
+					)
+				),
+				React.createElement(
+					"div",
+					{ className: "row" },
+					React.createElement(
+						"div",
+						{ className: "col-xs-6" },
+						React.createElement(
+							"h2",
+							null,
+							"Current Company Valuation:"
+						)
+					),
+					React.createElement(
+						"div",
+						{ className: "col-xs-6" },
+						React.createElement(
+							"div",
+							{ className: "input-group input-group-lg" },
+							React.createElement(
+								"span",
+								{ className: "input-group-addon" },
+								"$"
+							),
+							React.createElement("input", {
+								type: "number",
+								placeholder: "Enter your Company Valuation ",
+								value: this.props.coValuation,
+								ref: "coValuationInput",
+								onChange: this.handleChange,
+								className: "form-control",
+								min: "0",
+								step: "100000"
+							})
+						)
+					)
+				)
 			)
 		);
 	}
@@ -92,18 +150,28 @@ var Calculator = React.createClass({
 			null,
 			React.createElement(
 				"h1",
-				null,
-				" Calculator "
+				{ className: "text-center" },
+				" Startup Equity Calculator "
 			),
-			React.createElement(InputGroup, {
-				eqPercentage: this.state.eqPercentage,
-				coValuation: this.state.coValuation,
-				onUserInput: this.handleUserInput
-			}),
-			React.createElement(OutputGroup, {
-				eqPercentage: this.state.eqPercentage,
-				coValuation: this.state.coValuation
-			})
+			React.createElement(
+				"div",
+				{ className: "row" },
+				React.createElement("div", { className: "col-xs-1" }),
+				React.createElement(
+					"div",
+					{ className: "col-xs-10 jumbotron" },
+					React.createElement(InputGroup, {
+						eqPercentage: this.state.eqPercentage,
+						coValuation: this.state.coValuation,
+						onUserInput: this.handleUserInput
+					}),
+					React.createElement(OutputGroup, {
+						eqPercentage: this.state.eqPercentage,
+						coValuation: this.state.coValuation
+					})
+				),
+				React.createElement("div", { className: "col-xs-1" })
+			)
 		);
 	}
 });
