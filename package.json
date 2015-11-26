@@ -3,13 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "keystone": "^0.3.14",
     "async": "^1.4.2",
-    "underscore": "^1.8.3",
+    "babel-preset-react": "^6.1.18",
+    "babelify": "^7.2.0",
+    "dotenv": "^1.1.0",
+    "keystone": "^0.3.14",
+    "mongoose": "3.8",
     "node-sass": "^3.3.2",
     "node-sass-middleware": "^0.9.6",
-    "dotenv": "^1.1.0",
-    "mongoose": "3.8"
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "gulp": "^3.7.0",
