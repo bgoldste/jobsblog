@@ -4,6 +4,8 @@ doctype html
 html
   head
     meta(charset='UTF-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
     |     
     title Startup Equity Calculator
     |     
@@ -51,6 +53,16 @@ html
     #container
     |     
     script(src='/js/calc/build/calculator.js')
+        //- javascript
+
+    //- jQuery 1.11.3 is included by default, and required by both Bootstrap
+    //- and the KeystoneJS Content Editor. If you are not targeting IE8,
+    //- you can upgrade to 2.1.4 (also bundled) for better performance.
+    script(src='/js/jquery/jquery-1.11.3.min.js')
+
+    //- Customise which Bootstrap javascript files are served by including
+    //- them specifically here, instead of bootstrap-3.3.5.min.js
+    script(src='/js/bootstrap/bootstrap-3.3.5.min.js')
 
 
 
